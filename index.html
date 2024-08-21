@@ -1,66 +1,142 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Abhishek's Portfolio</title>
-  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-  <meta http-equiv="cache-control" content="no-cache" />
-  <meta name="robots" content="noindex, nofollow" />
-  <link rel="shortcut icon" href="/domain/en/images/transparent.ico" />
-  <link rel="stylesheet" type="text/css" href="ciCLIENT.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#hero {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#hero h1 {
+    margin-bottom: 10px;
+    font-size: 3rem;
+}
+
+#hero p {
+    font-size: 1.5rem;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+#projects .project {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+    </style>
 </head>
-
 <body>
-  <div id="epLang" class="contain"></div>
-  <header>
-    <div class="contain flex">
-      <h3>Hey ! Welcome to my Portfolio</h3>
-      <nav>
-        <a
-          href="/domain/media/en/gui/_CLIENTID_/issues.html?clientid=_CLIENTID_&locationid=-1&override=yes&agreement=no" style="color:#ef700c;">Make
-          a Report</a>
-        <a href="/domain/en/login.asp" class="follow-up-link" style="color:#ef700c;">Follow up on a Report</a>
-        <a href="/code.pdf" rel="newwindow" style="color:#ef700c;">Code of Conduct</a>
-        <a href="faq.pdf" rel="newwindow" style="color:#ef700c;">FAQs</a>
-      </nav>
-    </div>
-  </header>
-  <div id="epAttention" class="fill"></div>
-  <main class="contain">
-    <section>
-      <div class="col-left">
-        <h1 class="top">Our Commitment</h1>
-        <p>_CLIENTNAME_ is an organization with strong values of responsibility and integrity. Our <a href="code.pdf"
-            rel="newwindow">Code of Conduct</a> contains general guidelines for conducting business with the highest
-          standards of ethics.</p>
-        <p>_CLIENTNAME_ is committed to an environment where open, honest communications are the expectation, not the
-          exception. We want you to feel comfortable in approaching your supervisor or management in instances where you
-          believe violations of policies or standards have occurred.</p>
-        <p>In situations where you prefer to place an anonymous report in confidence, you are encouraged to use this
-          hotline, hosted by a third party hotline provider, EthicsPoint. You are encouraged to submit reports relating
-          to violations stated in our <a href="code.pdf" rel="newwindow">Code of Conduct</a>, as well as asking for
-          guidance related to policies and procedure and providing positive suggestions and stories.</p>
-        <p>The information you provide will be sent to us by EthicsPoint on a totally confidential and anonymous basis
-          if you should choose. You have our guarantee that your comments will be heard.</p>
-        <p class="bottom">See the <a href="faq.pdf" rel="newwindow">EthicsPoint FAQs</a> for more information.</p>
-      </div>
-      <div class="col-right">
-        <h2 class="top">To Make a Report</h2>
-        <div class="image-text-container">
-          <img src="./transparent-laptop.png"/> 
-          <h3>Online</h3>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer id="epNAVEXFooter" style="background-color: #004787;">
-    <h3 id="epEmergency" class="bottom" style="color: aliceblue;"></h3>
-  </footer>
-  <script type="text/javascript" src="https://secure.ethicspoint.com/domain/media/shared/ciCommon3.js"></script>
-  <script type="text/javascript" src="https://secure.ethicspoint.com/domain/media/shared/ciLangEN.js"></script>
-  <script type="text/javascript" src="https://secure.ethicspoint.com/domain/media/shared/ciPhoneNumbers3.js"></script>
-  <script type="text/javascript" src="https://secure.ethicspoint.com/domain/media/shared/ciDP3.js"></script>
-  <script type="text/javascript" src="ciClientVars.js"></script>
-</body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section id="hero">
+        <h1>Hello, I'm [Your Name]</h1>
+        <p>I'm a passionate Web Developer</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>A brief description of your background, skills, and interests.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Short description of Project 1.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Short description of Project 2.</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Responsive Design</li>
+            <!-- Add more skills as needed -->
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: your.email@example.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+    </footer>
+</body>
 </html>
