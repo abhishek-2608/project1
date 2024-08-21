@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
       /* styles.css */
 
@@ -13,18 +14,34 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 header {
     background-color: #333;
-    padding: 10px 0;
     color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .logo h1 {
+    margin: 0;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -34,36 +51,57 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
 }
 
 #hero {
     background-color: #f4f4f4;
     text-align: center;
     padding: 100px 20px;
+    margin-top: 50px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 #hero h1 {
     margin-bottom: 10px;
     font-size: 3rem;
+    animation: slideIn 1.5s ease-in-out;
 }
 
 #hero p {
     font-size: 1.5rem;
+    animation: slideIn 2s ease-in-out;
 }
 
 section {
     padding: 60px 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 h2 {
     text-align: center;
     margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
 #projects .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 #projects .project {
@@ -71,6 +109,7 @@ h2 {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    animation: zoomIn 1s ease-in-out;
 }
 
 footer {
@@ -78,14 +117,45 @@ footer {
     padding: 20px;
     background-color: #333;
     color: #fff;
+    animation: fadeInUp 1s ease-in-out;
 }
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width:
 
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
+            <div class="logo">
+                <h1>My Portfolio</h1>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul id="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -138,5 +208,12 @@ footer {
     <footer>
         <p>&copy; 2024 [Your Name]. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
